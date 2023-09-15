@@ -1,0 +1,63 @@
+/* body */
+body {
+    background-color: rgb(255, 234, 209);
+}
+
+/* header die gecentreert is */
+.header1 {
+    text-align: center;
+}
+
+/* container 1 met de button */
+.container1 {
+    border: 1px solid black;
+    height: 100px;
+    position: relative;
+}
+
+.button1 {
+    width: 300px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* container 2 met de button 2 */
+.container2 {
+    border: 1px solid black;
+    height: 100px;
+    position: relative;
+}
+
+.button2 {
+    width: 300px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+/* container 3 met 2 buttons (btn3 en btn4) */
+.container3 {
+    border: 1px solid black;
+    height: 60px;
+    position: relative;
+}
+
+.button3 {
+    width: 300px;
+    height: 60px;
+    position: absolute;
+    left: 30%;
+    transform: translateX(-50%);
+}
+
+.button4 {
+    width: 300px;
+    height: 60px;
+    position: absolute;
+    left: 70%;
+    transform: translateX(-50%);
+}
