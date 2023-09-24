@@ -1,57 +1,74 @@
-// prompt voor de naam van Speler 1
+// prompt for the name of Player 1
 const button1 = document.querySelector( ".Speler1");
     const owntext = document.querySelector(".owntext");
-    let promptnaam = prompt("geef je naam!");
-if (promptnaam !=null);
-owntext.textContent = promptnaam;
+    let promptname = prompt("geef je naam!");
+if (promptname !=null);
+owntext.textContent = promptname;
 
-//uitkomst
-let uitkomsten = {
-    speler1: 0,
-    speler2: 0
+//Result
+let results = {
+    player1: 0,
+    player2: 0
 };
 
-//dobbelstenen met hun functies
-function gooiDobbelsteen(speler) {
-    let uitkomst = Math.floor(Math.random() * 20) + 1;
+//dice with functions
+function throwdice(player) {
+    let result = Math.floor(Math.random() * 20) + 1;
 
-    if (speler === 1) {
-        uitkomsten.speler1 = uitkomst;
-        document.getElementById("uitkomst1").innerHTML = "Speler 1: " + uitkomst;
-    } else if (speler === 2) {
-        uitkomsten.speler2 = uitkomst;
-        document.getElementById("uitkomst2").innerHTML = "Speler 2: " + uitkomst;
+    if (player === 1) {
+        results.player1 = result;
+        document.getElementById("result1").innerHTML = "Speler 1: " + result;
+    } else if (player === 2) {
+        results.player2 = result;
+        document.getElementById("result2").innerHTML = "Speler 2: " + result;
     }
 }
 
-//uitkomst wanneer hoger
-function Hogerer() {
-    let hoger = "";
+//result of higher
+function higherresult() {
+    let higher = "";
 
-    if (uitkomsten.speler1 > uitkomsten.speler2) {
-        hoger = alert("Speler 1 heeft gewonnen!");
-    } else if (uitkomsten.speler1 < uitkomsten.speler2) {
-        hoger = alert("Speler 2 heeft gewonnen!");
+    if (results.player1 > results.player2) {
+        higher = alert("Speler 1 heeft gewonnen!");
+    } else if (results.player1 < results.player2) {
+        higher = alert("Speler 2 heeft gewonnen!");
     } else {
-        hoger = alert("Het is gelijkspel!");
+        higher = alert("Het is gelijkspel!");
     }
 
-    document.getElementById("lager").innerHTML = hoger;
+    document.getElementById("lager").innerHTML = higher;
 
 }
 
-//uitkomst wanneer lager
-function Laagerer() {
-    let lager = "";
+//result when lower
+function Lowerresult() {
+    let lower = "";
 
-    if (uitkomsten.speler1 < uitkomsten.speler2) {
-        lager = alert("Speler 1 heeft gewonnen!");
-    } else if (uitkomsten.speler1 > uitkomsten.speler2) {
-        lager = alert("Speler 2 heeft gewonnen!");
+    if (results.player1 < results.player2) {
+        lower = alert("Speler 1 heeft gewonnen!");
+    } else if (results.player1 > results.player2) {
+        lower = alert("Speler 2 heeft gewonnen!");
     } else {
-        lager = alert("Het is gelijkspel!");
+        lower = alert("Het is gelijkspel!");
     }
 
-    document.getElementById("lager").innerHTML = lager;
+    document.getElementById("lager").innerHTML = lower;
 
 }
+
+// The FPS counter for the META players, it checks how many frames you got (limited to 60 frames)
+let fps = document.getElementById("fps");
+let startTime = Date.now();
+let frame = 0;
+
+function tick() {
+  let time = Date.now();
+  frame++;
+  if (time - startTime > 1000) {
+      fps.innerHTML = (frame / ((time - startTime) / 1000)).toFixed(1);
+      startTime = time;
+      frame = 0;
+	}
+  window.requestAnimationFrame(tick);
+}
+tick();

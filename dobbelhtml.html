@@ -11,30 +11,34 @@
 
 <body>
 
-  <!-- container 2 met button 1 -->
+  <!-- Location of the FPS counter -->
+  <span id="fps">--</span> FPS</div>
+
+  <!-- container 1 with button 1 -->
 
   <div class="container1">
-    <button class="button1" onclick="gooiDobbelsteen(1)"> <div class="owntext"></div> gooien</button>
-    <p id="uitkomst1"></p>
+    <button class="button1" onclick="throwdice(1)"> <div class="owntext"></div> gooien</button>
+    <p id="result1"></p>
   </div>
 
   <p>&nbsp;</p>
-<!-- container 2 met button 2 -->
+<!-- container 2 with button 2 -->
   <div class="container2">
-    <button class="button2" onclick="gooiDobbelsteen(2)">Speler 2 gooien</button>
-    <p id="uitkomst2"></p>
+    <button class="button2" onclick="throwdice(2)">Speler 2 gooien</button>
+    <p id="result2"></p>
   </div>
 
   <p>&nbsp;</p>
-
+<!-- container 3 with buttons 3 and 4 -->
   <div class="container3">
-    <button class="button3" onclick="Hogerer()">hoger</button>
-    <button class="button4" onclick="Laagerer()">lager</button>
+    <button class="button3" onclick="higherresult()">hoger</button>
+    <button class="button4" onclick="Lowerresult()">lager</button>
   </div>
 
-
+<!-- Loads the javascript -->
   <script src="Script.js"></script>
-  
+
+  <!-- Don't mind this -->
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
@@ -576,6 +580,7 @@
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
+  <!-- SECRET -->
   <a href="lorem.html">lorem onze manier om leven te leven</a>
 
 </body>

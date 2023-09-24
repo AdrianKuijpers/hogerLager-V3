@@ -3,12 +3,12 @@ body {
     background-color: rgb(255, 234, 209);
 }
 
-/* header die gecentreert is */
+/* header That is centerd */
 .header1 {
     text-align: center;
 }
 
-/* container 1 met de button */
+/* container 1 with button 1 */
 .container1 {
     border: 1px solid black;
     height: 100px;
@@ -23,7 +23,7 @@ body {
     transform: translateX(-50%);
 }
 
-/* container 2 met de button 2 */
+/* container 2 with button 2 */
 .container2 {
     border: 1px solid black;
     height: 100px;
@@ -39,7 +39,7 @@ body {
 
 }
 
-/* container 3 met 2 buttons (btn3 en btn4) */
+/* container 3 with 2 buttons (button3 and button4) */
 .container3 {
     border: 1px solid black;
     height: 60px;

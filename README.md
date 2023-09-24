@@ -1,2 +1,2 @@
 # hogerLager
- hoger lager spel voor school
+ hoger lager game for school
